@@ -1,5 +1,7 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 import '../constants/constants.dart';
 import 'dio_interceptor.dart';
@@ -11,6 +13,14 @@ abstract class DioModule {
   Dio getAuthorizedDioClient() {
     final dioClint = _dioClient();
     dioClint.interceptors.addAll([AuthorizedRequestInterceptor()]);
+
+    if (kDebugMode) {
+      dioClint.interceptors.add(PrettyDioLogger(
+        requestBody: true,
+        responseBody: true,
+      ));
+    }
+
     return dioClint;
   }
 
@@ -19,6 +29,14 @@ abstract class DioModule {
   Dio getUnauthorizedDioClient() {
     final dioClint = _dioClient();
     dioClint.interceptors.addAll([UnauthorizedRequestInterceptor()]);
+
+    if (kDebugMode) {
+      dioClint.interceptors.add(PrettyDioLogger(
+        requestBody: true,
+        responseBody: true,
+      ));
+    }
+
     return dioClint;
   }
 

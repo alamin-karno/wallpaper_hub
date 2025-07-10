@@ -14,26 +14,16 @@ class UnauthorizedRequestInterceptor extends QueuedInterceptor {
   @override
   void onRequest(RequestOptions options, RequestInterceptorHandler handler) {
     options.headers.addAll(_baseHeaders);
-    log('${options.method} >>> ${options.uri}', name: 'API');
-    log('Query parameters: ${options.queryParameters}', name: 'API');
-    log('Request data: ${options.data}', name: 'API');
     super.onRequest(options, handler);
   }
 
   @override
   void onResponse(Response response, ResponseInterceptorHandler handler) {
-    log(
-      '${response.requestOptions.method} >>> ${response.requestOptions.uri}',
-      name: 'API',
-    );
-    log('Response data: ${response.data}', name: 'API');
     super.onResponse(response, handler);
   }
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
-    log('${err.requestOptions.method} >>> ${err.requestOptions.uri}');
-    log('Error data: ${err.response?.data}', name: 'API');
     super.onError(err, handler);
   }
 }
@@ -57,8 +47,6 @@ class AuthorizedRequestInterceptor extends UnauthorizedRequestInterceptor {
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) {
-    log('${err.requestOptions.method} >>> ${err.requestOptions.uri}');
-    log('Error data: ${err.response?.data}', name: 'API');
     if (err.response?.statusCode == HttpStatus.unauthorized) {
       // TODO: refresh token when access token expired
     } else {

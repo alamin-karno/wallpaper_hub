@@ -1,3 +1,3 @@
 class AppConstants {
-  static Duration requestTimeoutAsSeconds = Duration(seconds: 10);
+  static Duration requestTimeoutAsSeconds = Duration(seconds: 20);
 }
