@@ -18,7 +18,7 @@ class TopActionBar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomIconButton(
-            icon: Icons.arrow_back_ios_new_rounded,
+            icon: Icons.arrow_back_ios_new_outlined,
             color: wallpaper.avgColor,
             onPressed: () => context.pop(),
           ),

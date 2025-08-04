@@ -4,6 +4,7 @@ import 'package:shimmer/shimmer.dart';
 import 'package:wallpaper_hub/features/home/domain/entities/wallpaper_data.dart';
 
 import '../../details.dart';
+import '../widgets/bottom_action_bar.dart';
 
 class DetailsPage extends StatelessWidget {
   const DetailsPage({super.key, required this.wallpaper});
@@ -42,6 +43,16 @@ class DetailsPage extends StatelessWidget {
             ),
           ),
           TopActionBar(wallpaper: wallpaper),
+          Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16.0,
+                vertical: 20.0,
+              ),
+              child: BottomActionBar(wallpaper: wallpaper),
+            ),
+          ),
         ],
       ),
     );
