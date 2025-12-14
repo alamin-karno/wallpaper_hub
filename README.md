@@ -9,27 +9,27 @@ Check in Live with Web: <b><a href="https://karno786.github.io/Wallpaper-Hub-Web
 # Screenshots:
 
 
-| Web and Android Screen |
-| :----:   |
+|                                                          Web and Android Screen                                                          |
+|:----------------------------------------------------------------------------------------------------------------------------------------:|
 | <img src="screenshots/Web and Android Screen.PNG" alt="Wallpaper Hub Web and Android Screenshot" title="Wallpaper Hub Web and Android" > |
 
-| Loading Screen      |  Home Screen |  Category Screen |
-| :---:       |    :----:   | :----:   |
-| <img src="screenshots/Screenshot_1631622966.png" width="350" >       |  <img src="screenshots/Screenshot_1631622889.png" width="350">     |  <img src="screenshots/Screenshot_1631622906.png" width="350">  |
+|                         Loading Screen                         |                          Home Screen                          |                        Category Screen                        |
+|:--------------------------------------------------------------:|:-------------------------------------------------------------:|:-------------------------------------------------------------:|
+| <img src="screenshots/Screenshot_1631622966.png" width="350" > | <img src="screenshots/Screenshot_1631622889.png" width="350"> | <img src="screenshots/Screenshot_1631622906.png" width="350"> |
 
 
-| SetWallpaper Screen     |  Share Screen |  Save Screen |
-| :---:       |    :----:   | :----:   |
-| <img src="screenshots/Screenshot_1631622918.png" width="350">       |  <img src="screenshots/Screenshot_1631622936.png" width="350">     |  <img src="screenshots/Screenshot_1631622943.png" width="350">  |
+|                      SetWallpaper Screen                      |                         Share Screen                          |                          Save Screen                          |
+|:-------------------------------------------------------------:|:-------------------------------------------------------------:|:-------------------------------------------------------------:|
+| <img src="screenshots/Screenshot_1631622918.png" width="350"> | <img src="screenshots/Screenshot_1631622936.png" width="350"> | <img src="screenshots/Screenshot_1631622943.png" width="350"> |
 
-| Search Screen     |  ImageView Screen |  
-| :---:       |    :----:   | 
-| <img src="screenshots/Screenshot_1631622978.png" alt="Wallpaper Hub Search Screenshot" title="Wallpaper Hub Search Screen" width="350">      |  <img src="screenshots/Screenshot_1631623520.png" alt="Wallpaper Hub ImageView Screenshot" title="Wallpaper Hub ImageView Screen" width="350">     |  
+|                                                              Search Screen                                                              |                                                               ImageView Screen                                                                |  
+|:---------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------:| 
+| <img src="screenshots/Screenshot_1631622978.png" alt="Wallpaper Hub Search Screenshot" title="Wallpaper Hub Search Screen" width="350"> | <img src="screenshots/Screenshot_1631623520.png" alt="Wallpaper Hub ImageView Screenshot" title="Wallpaper Hub ImageView Screen" width="350"> |  
 
 
-|  WebView Home Screen     |   WebView Error Screen |  
-| :---:       |    :----:   | 
-| <img src="screenshots/Wallpaper Hub - Web Version.jpeg" alt="Wallpaper Hub WebView Home Screenshot" title="Wallpaper Hub WebView Home Screen" >     |  <img src="https://github.com/karno786/Wallpaper-Hub/blob/master/screenshots/Wallpaper Hub - Web Version.PNG" alt="Wallpaper Hub WebView Error Screenshot" title="Wallpaper Hub WebView Error Screen" >     |  
+|                                                               WebView Home Screen                                                               |                                                                                          WebView Error Screen                                                                                          |  
+|:-----------------------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
+| <img src="screenshots/Wallpaper Hub - Web Version.jpeg" alt="Wallpaper Hub WebView Home Screenshot" title="Wallpaper Hub WebView Home Screen" > | <img src="https://github.com/karno786/Wallpaper-Hub/blob/master/screenshots/Wallpaper Hub - Web Version.PNG" alt="Wallpaper Hub WebView Error Screenshot" title="Wallpaper Hub WebView Error Screen" > |  
 
 
 
