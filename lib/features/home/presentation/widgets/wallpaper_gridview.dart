@@ -28,7 +28,7 @@ class WallpaperGridview extends StatelessWidget {
             mainAxisSpacing: 6,
             crossAxisSpacing: 6,
             physics: NeverScrollableScrollPhysics(),
-            padding: EdgeInsets.symmetric(horizontal: 6, vertical: 20),
+            padding: EdgeInsets.only(left: 6,right: 6, bottom: 20),
             itemCount: wallpapers.length,
             itemBuilder: (context, index) {
               return WallpaperView(

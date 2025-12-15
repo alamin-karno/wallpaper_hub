@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       body: CustomScrollView(
         physics: ClampingScrollPhysics(),
         slivers: [
-          SliverAppBar(title: AppNameWidget()),
+          SliverAppBar(title: AppNameWidget(),centerTitle: false),
           SliverToBoxAdapter(child: WallpaperGridview()),
         ],
       ),
