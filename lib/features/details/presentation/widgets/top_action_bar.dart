@@ -26,7 +26,7 @@ class TopActionBar extends StatelessWidget {
             icon: Icons.ios_share,
             color: wallpaper.avgColor,
             onPressed: () {
-              AppHelper.shareWallpaperLink(wallpaper: wallpaper);
+              AppHelper.shareWallpaper(context: context, wallpaper: wallpaper);
             },
           ),
         ],
