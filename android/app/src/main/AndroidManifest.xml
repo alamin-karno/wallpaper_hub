@@ -2,12 +2,20 @@
     package="com.alaminkarno.wallpaper_hub">
 
     <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
-   <application
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+    <!-- Add this for Android 13 and above to show notifications -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
        android:requestLegacyExternalStorage="true"
-        android:label="wallpaper_hub"
-        android:icon="@mipmap/ic_launcher"
+       android:label="wallpaper_hub"
+       android:icon="@mipmap/ic_launcher"
+       android:usesCleartextTraffic="true"
        android:enableOnBackInvokedCallback="true">
         <activity
             android:name=".MainActivity"

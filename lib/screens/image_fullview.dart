@@ -279,7 +279,7 @@ class _ImageViewState extends State<ImageView> {
 
       try {
         result = await WallpaperManagerPlus().setWallpaper(
-          file.path,
+          File(file.path),
           wallpaperType,
         );
 

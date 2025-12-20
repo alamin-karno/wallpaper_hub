@@ -40,6 +40,22 @@ abstract class DioModule {
     return dioClint;
   }
 
+  @Named('Download')
+  @singleton
+  Dio getDownloadDioClient() {
+    final dioClint = _dioClient();
+    dioClint.interceptors.addAll([UnauthorizedRequestInterceptor()]);
+
+    if (kDebugMode) {
+      dioClint.interceptors.add(PrettyDioLogger(
+        requestBody: true,
+        responseBody: true,
+      ));
+    }
+
+    return dioClint;
+  }
+
   Dio _dioClient() {
     final baseOptions = BaseOptions(
       baseUrl: AppApiEndPoint.baseUrl,

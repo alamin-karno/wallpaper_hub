@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:wallpaper_hub/core/di/di_container.dart';
 
 class AppBlocObserver extends BlocObserver {
@@ -31,6 +32,11 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
   // Add cross-flavor configuration here
   WidgetsFlutterBinding.ensureInitialized();
   initDi();
+
+  await FlutterDownloader.initialize(
+    debug: true, // Set to false in production
+    ignoreSsl: true,
+  );
 
   runApp(await builder());
 }

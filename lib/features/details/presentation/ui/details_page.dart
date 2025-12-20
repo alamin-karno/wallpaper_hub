@@ -1,6 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';
+import 'package:wallpaper_hub/core/di/inject.dart';
+import 'package:wallpaper_hub/features/details/presentation/cubit/download_wallpaper_cubit.dart';
 import 'package:wallpaper_hub/features/home/domain/entities/wallpaper_data.dart';
 
 import '../../details.dart';
@@ -15,45 +18,48 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
 
-    return Scaffold(
-      body: Stack(
-        children: [
-          CachedNetworkImage(
-            height: size.height,
-            width: size.width,
-            fit: BoxFit.cover,
-            imageUrl: wallpaper.src.original,
-            placeholder: (context, url) => Shimmer.fromColors(
-              baseColor: Colors.white54,
-              highlightColor: Colors.white70,
-              child: Container(
-                height: size.height,
-                width: size.width,
-                child: Icon(
-                  Icons.image,
-                  color: Colors.grey.shade300,
-                  size: size.width / 2,
+    return BlocProvider(
+      create: (context) => DownloadWallpaperCubit(inject(), inject()),
+      child: Scaffold(
+        body: Stack(
+          children: [
+            CachedNetworkImage(
+              height: size.height,
+              width: size.width,
+              fit: BoxFit.cover,
+              imageUrl: wallpaper.src.original,
+              placeholder: (context, url) => Shimmer.fromColors(
+                baseColor: Colors.white54,
+                highlightColor: Colors.white70,
+                child: Container(
+                  height: size.height,
+                  width: size.width,
+                  child: Icon(
+                    Icons.image,
+                    color: Colors.grey.shade300,
+                    size: size.width / 2,
+                  ),
                 ),
               ),
-            ),
-            errorWidget: (context, url, error) => Icon(
-              Icons.image,
-              color: Colors.grey.shade300,
-              size: size.width / 2,
-            ),
-          ),
-          TopActionBar(wallpaper: wallpaper),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(
-                horizontal: 16.0,
-                vertical: 20.0,
+              errorWidget: (context, url, error) => Icon(
+                Icons.image,
+                color: Colors.grey.shade300,
+                size: size.width / 2,
               ),
-              child: BottomActionBar(wallpaper: wallpaper),
             ),
-          ),
-        ],
+            TopActionBar(wallpaper: wallpaper),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 16.0,
+                  vertical: 20.0,
+                ),
+                child: BottomActionBar(wallpaper: wallpaper),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
